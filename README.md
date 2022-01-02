@@ -1,2 +1,2 @@
-# goit-react-hw-03-phonebook
-Домашняя работа №3 ТЕЛЕФОННАЯ КНИГА Local Storage
+# goit-react-hw-04-hooks-phonebook
+Домашняя работа №4 ТЕЛЕФОННАЯ КНИГА НА ХУКАХ
