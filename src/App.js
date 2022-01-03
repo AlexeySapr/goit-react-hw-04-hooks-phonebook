@@ -55,17 +55,10 @@ const App = () => {
     window.localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
-  const filteredContacts = () => {
-    const normalizedFilter = filter.toLowerCase();
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(normalizedFilter),
-    );
-  };
-
-  // const normalizedFilter = filter.toLowerCase();
-  // const filteredContacts = contacts.filter(contact =>
-  //   contact.name.toLowerCase().includes(normalizedFilter),
-  // );
+  const normalizedFilter = filter.toLowerCase();
+  const filteredContacts = contacts.filter(contact =>
+    contact.name.toLowerCase().includes(normalizedFilter),
+  );
 
   return (
     <Header title="Phonebook">
@@ -77,7 +70,7 @@ const App = () => {
         <Section title={'Contacts'}>
           <ContactFilter value={filter} onChange={filterChange} />
           <ContactList
-            contacts={filteredContacts()}
+            contacts={filteredContacts}
             onDeleteContact={delContact}
           />
         </Section>
